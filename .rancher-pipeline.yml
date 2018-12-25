@@ -15,7 +15,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
-      registry: 127.0.0.1:34142
+      pushRemote: true
+      registry: quay.io/anypm
 - name: Deploy
   steps:
   - applyYamlConfig:
